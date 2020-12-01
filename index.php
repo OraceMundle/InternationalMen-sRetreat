@@ -1,6 +1,6 @@
 <?php 
 
-$title = "International Men's Retreat";
+$title = "Index";
 require_once 'includes/header.php'; 
 
 ?>
