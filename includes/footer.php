@@ -1,13 +1,14 @@
-<div id="footer" class="p-3 bg-dark text-white fixed-bottom ">
-    <p class="text-center"> Copyright &copy; - International Men's Conference <?php echo 'Copyright ' . date('Y'); ?>
+
+
+</div>
+
+<div id="footer" class="p-3 bg-dark text-white  ">
+    <p class="text-center"> Copyright &copy; - International Men's Retreat <?php echo 'Copyright ' . date('Y'); ?>
 
     </p>
 
 
 </div>
-
-</div>
-
 
 
 <!-- Optional JavaScript; choose one of the two! -->

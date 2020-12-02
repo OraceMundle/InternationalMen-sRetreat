@@ -79,7 +79,10 @@ require_once 'includes/header.php';
     <br/>
     <br/>
     <br/>
-    <button type="submit" name="submit" class="btn btn-primary ">Next</button>
+    <div class="text-center">
+    <button type="submit" name="submit" class="btn btn-outline-primary ">Next</button>
+    <a href="index.php" class="btn btn-outline-primary">Home</a> 
+    </div>
 </form>
 
 <br/>
