@@ -16,12 +16,11 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
         <a class="navbar-brand" href="index.php">
-            <img src="uploads/men.jpg" width="60" height="60"
-                class="d-inline-block align-top" alt="" loading="lazy">
-                
-            </a>
+            <img src="uploads/men.jpg" width="60" height="60" class="d-inline-block align-top" alt="" loading="lazy">
+
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,9 +28,14 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mr-auto">
                 <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="viewrecords.php">Register</a>
-                <a class="nav-link" href="viewrecords.php">View Reservations</a>
+                <a class="nav-link" href="regform1.php">Register</a>
+                <a class="nav-link" href="viewreservation.php">View Reservations</a>
 
+<!-- add functionality to search bar   -->
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
                 <!--
                 <a class="nav-link" href="view.php">View Attendee</a>           
                 <a class="nav-link" href="#">Pricing</a>
