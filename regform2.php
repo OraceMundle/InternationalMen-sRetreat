@@ -1,6 +1,6 @@
 <?php 
 
-$title = "Registration Form 1";
+$title = "Registration Form 2";
 require_once 'includes/header.php'; 
 
 ?>
@@ -12,7 +12,7 @@ require_once 'includes/header.php';
 
 <!--<form method="get" action="success.php">  Snippet of code uses the get action method -->
 <!-- form utilizing the post method -->    
-<form method="post" action="regform2.php" enctype="multipart/form-data">
+<form method="post" action="success.php" enctype="multipart/form-data">
     <div class="form-group">
         <label for="firstname">First Name</label>
         <input required type="text" class="form-control" id="firstname" name="firstname" aria-describedby="text">
@@ -28,36 +28,7 @@ require_once 'includes/header.php';
         <input type="text" class="form-control" id="dob" name="dob" aria-describedby="dateHelp">
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
-    <div class="form-group">
-        <label for="speciality">Area of Speciality</label>
-        
-        
-        
-        
-        <!-- insert drop down box selection -->
-        <select class="form-control" id="speciality" name="speciality">
-          
-        <!-- 
-        <?php // while($r = $results->fetch(PDO::FETCH_ASSOC)) {    ?>
-
-            <option value="<?php //echo $r['speciality_id'] ?>"><?php //echo $r['name']; ?> </option>  
-
-
-
-           <?php// } ?>
-        --> 
-
-            
-            <option value="1">Database Admin</option>
-            <option>Software Developer</option>
-            <option>Web Adminstrator</option>
-            <option>Other</option>
-            <option>5</option>
-        </select>
-
-        <!--<input type="text" class="form-control" id="speciality" aria-describedby="text">-->
-        <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
-    </div>
+    
     <div class="form-group">
         <label for="exampleInputEmail1">Email address</label> 
         <input required type="email" class="form-control" id="exampleInputEmail1" name="exampleInputEmail1" aria-describedby="emailHelp">
@@ -79,7 +50,7 @@ require_once 'includes/header.php';
     <br/>
     <br/>
     <br/>
-    <button type="submit" name="submit" class="btn btn-primary ">Next</button>
+    <button type="submit" name="submit" class="btn btn-primary ">Submit</button>
 </form>
 
 <br/>
