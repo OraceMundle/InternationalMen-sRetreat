@@ -17,8 +17,8 @@
 
 <body>
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" style="background-color: #e3f2fd;">
-        <a class="navbar-brand" href="index.php">
-            <img src="uploads/men.jpg" width="60" height="60" class="d-inline-block align-top" alt="" loading="lazy">
+        <a class="navbar-brand " href="index.php">
+            <img src="uploads/men.jpg" width="60" height="60" class="d-inline-block align-top rounded-circle border border-success" alt="" loading="lazy">
 
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
@@ -32,7 +32,10 @@
                 <a class="nav-link" href="viewreservation.php">View Reservations</a>
 
 <!-- add functionality to search bar   -->
-                <form class="form-inline">
+
+
+
+                <form class="form-inline" action="https://www.google.com/search">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
@@ -43,12 +46,14 @@
                 -->
             </div>
             <div class="navbar-nav ml-auto">
+
                 <?php 
+
 
                   if(!isset($_SESSION['userid'])) {
 
                 ?>
-
+                
                 <a class="nav-link active" href="login.php">Login <span class="sr-only">(current)</span></a>
                 <!--<a class="nav-link" href="viewrecords.php">View Attendees</a>-->
 
