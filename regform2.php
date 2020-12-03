@@ -5,7 +5,7 @@ require_once 'includes/header.php';
 
 <h1><?php echo $title ?></h1>
 
-<h1 class="text-center">International Men's Retreat Registration</h1>
+<h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded">International Men's Retreat Registration</h1>
 
 <!--<form method="get" action="success.php">  Snippet of code uses the get action method -->
 <!-- form utilizing the post method -->
@@ -39,7 +39,7 @@ require_once 'includes/header.php';
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
 
-    </br>
+    <br />
 
     <div class="form-group">
         <label for="country">Country</label>
@@ -60,22 +60,33 @@ require_once 'includes/header.php';
     </div>
 
     <br />
-
+    <div class="form-group ">
+        <label for="yearsOfService">Retreat Fees Payment Options: </label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="option1">
+            <label class="form-check-label" for="inlineRadio1">Regional Office</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" value="option2">
+            <label class="form-check-label" for="inlineRadio2">Online</label>
+        </div>
+    </div>
+    
     <div class="custom-file">
         <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar">
         <label class="custom-file-label" for="avatar">Choose File</label>
         <small id="avatar" class="form-text text-danger">File Upload (Optional)</small>
-
     </div>
 
     <br />
     <br />
     <br />
     <div class="text-center">
-        <button type="submit" name="submit" class="btn btn-outline-primary ">Save </button> <span class="text-success">--></span>
+        <button type="submit" name="submit" class="btn btn-outline-primary ">Save </button> <span
+            class="text-success">--></span>
         <a href="reviewregform.php" class="btn btn-outline-primary">Review</a>
         <a href="regform1.php" class="btn btn-outline-primary">Back</a>
-        <a href="index.php" class="btn btn-outline-primary">Home</a> 
+        <a href="index.php" class="btn btn-outline-primary">Home</a>
 
     </div>
 </form>
