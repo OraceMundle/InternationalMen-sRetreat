@@ -75,6 +75,7 @@ require_once 'includes/header.php';
         <button type="submit" name="submit" class="btn btn-outline-primary ">Save </button> <span class="text-success">--></span>
         <a href="reviewregform.php" class="btn btn-outline-primary">Review</a>
         <a href="regform1.php" class="btn btn-outline-primary">Back</a>
+        <a href="index.php" class="btn btn-outline-primary">Home</a> 
 
     </div>
 </form>
