@@ -14,10 +14,10 @@ require_once 'includes/header.php';
     <div class="card" style="width: 25rem;">
         <div class="card-body">
             <h5 class="card-title"><?php echo $_POST['firstname'] . ' ' . $_POST['lastname'];   ?></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><?php  //echo $_GET['speciality'];  ?></h6>
-            <p class="card-text">Date of Birth: <?php    $_POST['dob']; ?> </p>
-            <p class="card-text">Email Address: <?php    // echo $_GET['exampleInputEmail1']; ?> </p>
-            <p class="card-text">Phone Number: <?php    //echo $_GET['phone']; ?> </p>
+            <h6 class="card-subtitle mb-2 text-muted"><?php echo $_POST['churchPosition'];  ?></h6>
+            <p class="card-text">Date of Birth: <?php   echo $_POST['dob']; ?> </p>
+            <p class="card-text">Email Address: <?php   echo $_POST['exampleInputEmail1']; ?> </p>
+            <p class="card-text">Phone Number: <?php    echo $_POST['phone']; ?> </p>
 
 
 
@@ -36,23 +36,11 @@ require_once 'includes/header.php';
     </div>
 </form>
 
-
-
-
-
-
 <br />
 <br />
 <br />
 <br />
-
-
-
-
 
 <?php 
-
-
 require_once 'includes/footer.php'; 
-
 ?>

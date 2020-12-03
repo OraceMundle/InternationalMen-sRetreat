@@ -9,7 +9,7 @@ require_once 'includes/header.php';
 
 <!--<form method="get" action="success.php">  Snippet of code uses the get action method -->
 <!-- form utilizing the post method -->
-<form method="post" action="" enctype="multipart/form-data">
+<form method="post" action="reviewregform.php" enctype="multipart/form-data">
 
     <div class="form-group">
         <label for="churchposition">Church Postion</label>
