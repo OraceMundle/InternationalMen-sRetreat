@@ -1,10 +1,7 @@
 <?php 
-
 $title = "Review Registration Form 1";
 require_once 'includes/header.php'; 
-
 ?>
-
 
 <h1><?php echo $title ?></h1>
 
@@ -28,13 +25,10 @@ require_once 'includes/header.php';
         </div>
     </div>
 
-
-
-
-
     <br />
     <br />
     <br />
+
     <div class="text-center">
         <button type="submit" name="submit" class="btn btn-outline-primary ">Submit </button>
         <a href="regform1.php" class="btn btn-outline-primary">Back</a>
