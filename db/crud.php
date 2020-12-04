@@ -108,7 +108,7 @@
             try {
                 //code...
                 //assign data from database to variable $sql
-                $sql="SELECT * FROM attendee INNER JOIN specialities  ON attendee.speciality_id = specialities.speciality_id WHERE attendee_id = :id";
+                $sql="SELECT * FROM attendee INNER JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id WHERE attendee_id = :id";
                 $stmt=$this->db->prepare($sql);
                 $stmt->bindparam(':id',$id);
                 $stmt->execute();
@@ -128,12 +128,12 @@
         }//end of get attendeeDetails function
 
 
-        //get Specialities function
-        public function getSpecialities(){
+        //get Church Position function
+        public function getChurchPosition(){
 
             try {
                 //code...
-                $sql="SELECT * FROM `specialities`";
+                $sql="SELECT * FROM `churchposition`";
                 $result=$this->db->query($sql);
                 return $result;
     
@@ -145,15 +145,15 @@
             }
 
            
-        }//end of get Specialities function
+        }//end of get Church Position function
 
 
-        //get Specialities function by ID
-        public function getSpecialitiesById($id){
+        //get Church Position function by ID
+        public function getChurchPositionById($id){
 
             try {
                 //code...
-                $sql="SELECT * FROM `specialities` WHERE speciality_id = :id";
+                $sql="SELECT * FROM `churchposition` WHERE churchposition_id = :id";
                 $stmt=$this->db->prepare($sql);
                 $stmt->bindparam(':id', $id);
                 $stmt->execute();

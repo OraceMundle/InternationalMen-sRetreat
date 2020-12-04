@@ -10,7 +10,7 @@ require_once 'includes/header.php';
 
 <!--<form method="get" action="success.php">  Snippet of code uses the get action method -->
 <!-- form utilizing the post method -->
-<form method="post" action="reviewregform.php" enctype="multipart/form-data">
+<form method="post" action="regform2.php" enctype="multipart/form-data">
 
     <div class="form-group">
         <label for="firstname">First Name</label>
@@ -65,7 +65,7 @@ require_once 'includes/header.php';
         <br />
         <br />
         <div class="text-center">
-            <button type="submit" name="submit" class="btn btn-outline-primary ">Save </button> <span
+            <button type="submit" name="submit" class="btn btn-outline-primary " value="Go to Step 2">Save </button> <span
                 class="text-success">--></span>
             <a href="regform2.php" class="btn btn-outline-primary">Next</a>
             <a href="index.php" class="btn btn-outline-primary">Home</a>

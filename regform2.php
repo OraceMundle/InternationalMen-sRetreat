@@ -1,4 +1,7 @@
+
 <?php 
+require_once 'includes/session.php';
+
 $title = "Registration Form 2";
 require_once 'includes/header.php'; 
 ?>

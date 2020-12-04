@@ -1,4 +1,6 @@
 <?php 
+require_once 'includes/session.php';
+
 $title = "Review Registration Form 1";
 require_once 'includes/header.php'; 
 ?>
@@ -13,7 +15,7 @@ require_once 'includes/header.php';
 
     <div class="card" style="width: 25rem;">
         <div class="card-body">
-            <h5 class="card-title"><?php echo $_POST['firstname'] . ' ' . $_POST['lastname'];   ?></h5>
+            <h5 class="card-title"><?php echo $_SESSION[firstname] = $_POST['firstname'] . ' ' . $_POST['lastname'];   ?></h5>
             <h6 class="card-subtitle mb-2 text-muted"><?php echo $_POST['churchPosition'];  ?></h6>
             <p class="card-text">Date of Birth: <?php   echo $_POST['dob']; ?> </p>
             <p class="card-text">Email Address: <?php   echo $_POST['exampleInputEmail1']; ?> </p>
