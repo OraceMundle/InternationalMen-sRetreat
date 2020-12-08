@@ -4,7 +4,7 @@
 //Development connection
 
 $host = '127.0.0.1'; 
-$db = 'attendance_db';
+$db = 'internationalmensretreat_db';
 $user = 'root';
 $pass = '';
 //charset variable
