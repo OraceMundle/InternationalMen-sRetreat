@@ -1,3 +1,8 @@
+<br />
+<br />
+<br />
+
+
 <?php 
 
     $title = 'User Login';
@@ -31,47 +36,51 @@
     }
 
 ?>
- 
-<br/>
+
+<br />
 <h1 class="text-center"><?php echo $title ?> </h1>
 
 <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
     <table class="table table-sm">
         <tr>
 
-        <td><label for="username">Username: * </label></td>
-            <td><input required type="text" name="username" class="form-control" id="username"  value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') {echo $_POST['username'];} ?>" >
+            <td><label for="username">Username: * </label></td>
+            <td><input required type="text" name="username" class="form-control" id="username"
+                    value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') {echo $_POST['username'];} ?>">
 
             </td>
-           
 
-                <?php if(empty($username) && $_SERVER['REQUEST_METHOD'] == 'POST') echo "<p class='text-danger'>
+
+            <?php if(empty($username) && $_SERVER['REQUEST_METHOD'] == 'POST') echo "<p class='text-danger'>
              $username_error</p>"; ?>
-            
+
         </tr>
         <tr>
-        <td><label for="password"  >Password: * </label></td>
+            <td><label for="password">Password: * </label></td>
             <td><input type="password" name="password" class="form-control" id="password" required>
-           
-            
+
+
                 <?php if(empty($password) && isset($password_error)) echo "<p class='text-danger'>
             $password_error</p>"; ?>
 
-            
+
 
             </td>
         </tr>
 
-    </table><br/><br/>
+    </table><br /><br />
     <button type="submit" value="Login" class="btn btn-primary">Login</button>
-    
-    <br/>
-    <br/>
-    <a href="index.php">Sign up</a><br/> 
+
+    <br />
+    <br />
+    <a href="index.php">Sign up</a><br />
     <a href="a">Forget Password </a>
-    
 
-</form><br/><br/><br/>
 
+</form><br /><br /><br />
+<br />
+<br />
+<br />
+<br />
 
 <h6 class="text-center"><?php require_once 'includes/footer.php'; ?></h6>
