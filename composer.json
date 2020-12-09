@@ -1,5 +1,7 @@
 {
     "require": {
-        "snapappointments/bootstrap-select": "^1.13"
+        "snapappointments/bootstrap-select": "^1.13",
+        "sendgrid/sendgrid": "^7.9",
+        "vlucas/phpdotenv": "^5.2"
     }
 }
