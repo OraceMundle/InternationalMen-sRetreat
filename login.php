@@ -73,8 +73,8 @@
 
     <br />
     <br />
-    <a href="index.php">Sign up</a><br />
-    <a href="a">Forget Password </a>
+     <a href="index.php">Sign up</a> <span><a href="a">Forget Password </a> </span>
+    
 
 
 </form><br /><br /><br />
