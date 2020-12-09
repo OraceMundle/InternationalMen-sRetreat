@@ -12,8 +12,8 @@ require 'vendor\autoload.php';
         public static function SendMail($to, $subject, $content){
 
                     //variable key stores API
-                    $key=Dotenv\Dotenv::createImmutable(__DIR__,"/..");
-                    $key->load();
+                    //$key=Dotenv\Dotenv::createImmutable(__DIR__,"/..");
+                    //$key->load();
 
 
                     //$key = getenv('API_KEY');
