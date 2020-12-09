@@ -33,7 +33,7 @@
                 <a class="nav-link" href="regform1.php">Register</a>
                 <a class="nav-link" href="viewreservation.php">View Reservations</a>
                 <a class="nav-link" href="viewrecords.php">View Records</a>
-
+                
 
                 <!-- Google search   -->
                 <form class="form-inline" action="https://www.google.com/search" method="GET">
@@ -42,6 +42,8 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
                         value="Google Search">Search</button>
                 </form>
+
+                
                 <!--
                 <a class="nav-link" href="view.php">View Attendee</a>           
                 <a class="nav-link" href="#">Pricing</a>
@@ -56,7 +58,9 @@
                   if(!isset($_SESSION['userid'])) {
 
                 ?>
-
+                
+                <p class="text-info fs-2"><?php echo date("Y-m-d h:i:sa") ?></p>
+             
                 <a class="nav-link active" href="login.php">Login <span class="sr-only">(current)</span></a>
                 <!--<a class="nav-link" href="viewrecords.php">View Attendees</a>-->
 
@@ -72,4 +76,4 @@
     </nav>
     <div class="container">
 
-        <br />
+    

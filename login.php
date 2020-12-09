@@ -69,12 +69,14 @@
         </tr>
 
     </table><br /><br />
-    <button type="submit" value="Login" class="btn btn-primary">Login</button>
+
+    <button type="submit" value="Login" class="btn btn-outline-primary btn-lg">Login</button>
 
     <br />
     <br />
-     <a href="index.php">Sign up</a> <span><a href="a">Forget Password </a> </span>
-    
+
+    <a href="regform1.php">Sign Up</a> <span class=" "><a href="a">Forget Password </a> </span>
+
 
 
 </form><br /><br /><br />
