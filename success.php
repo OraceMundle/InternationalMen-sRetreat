@@ -6,51 +6,6 @@
     require_once 'db/conn.php';
     require_once 'includes/session.php';
     require_once 'sendemail.php';
-    
-/*
-    
-    //checking to see if 
-    if(isset($_POST['submit'])){
-        //extracting values from the $_POST array
-        $fname=$_POST['firstname'];
-        $lname=$_POST['lastname'];
-        $dob=$_POST['dob'];
-        $email=$_POST['exampleInputEmail1'];
-        $contact=$_POST['phone'];
-        $churchposition=$_POST['churchposition']; 
-
-        //upload file code path
-        
-              
-        
-        $orig_file=$_FILES["avatar"]["tmp_name"];
-        $ext=pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
-        $target_dir='uploads/';
-        $destination="$target_dir$contact.$ext";
-        //$destination = $target_dir . basename($_FILES["avatar"]["name"]);
-        move_uploaded_file($orig_file,$destination);
-       
-        //Call function to insert and track if success or not
-        $isSuccess=$crud->insertAttendee($fname,$lname,$dob,$email,$contact,$speciality,$destination);
-        $specialityName=$crud->getChurchPositionById($speciality);
-       
-        if($isSuccess){
-
-            //echo 'Registration Successful'; Not displaying
-            //echo '<h1 class="text-center text-success">Registration Successful!!!</h1>';
-            SendEmail::SendMail($email, 'Welcome' . ' ' . $fname . ' ' . $lname . ' ' . 'to International Men-s Retreat 2020', 'You have successfully registered for this year\'s Men-s Retreat ');
-            include 'includes/successmessage.php';
-
-         
-            
-        } else{
-
-            //echo  '<h1 class="text-center text-danger">Registration unsuccessful</h1>';
-            include 'includes/errormessage.php';
-        }
-
-    }
-*/
 
 ?>
 

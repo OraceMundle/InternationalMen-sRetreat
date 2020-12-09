@@ -3,6 +3,63 @@ require_once 'includes/session.php';
 
 $title = "Review Registration Form 1";
 require_once 'includes/header.php'; 
+require_once 'db/conn.php';
+require_once 'sendemail.php';
+
+    
+
+    
+    //checking to see if 
+    if(isset($_POST['submit'])){
+        //extracting values from the $_POST array
+        $fname=$_POST['firstname'];
+        $lname=$_POST['lastname'];
+        $dob=$_POST['dob'];
+        $homeAddress=$_POST['homeAddress'];
+        $email=$_POST['exampleInputEmail1'];
+        $contact=$_POST['phone'];
+        $firsttimeattend=$_POST['inlineRadioOptions'];
+        $churchposition=$_POST['churchposition'];
+        $churchname=$_POST['churchname'];
+        $country=$_POST['country'];
+        $yearsofservice=$_POST['yearsofservice'];
+        $paymentoption=$_POST['inlineRadioOptions2'];
+
+
+        //upload file code path
+        
+              
+        
+        $orig_file=$_FILES["avatar"]["tmp_name"];
+        $ext=pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
+        $target_dir='uploads/';
+        $destination="$target_dir$contact.$ext";
+        //$destination = $target_dir . basename($_FILES["avatar"]["name"]);
+        move_uploaded_file($orig_file,$destination);
+       
+        //Call function to insert and track if success or not
+        $isSuccess=$crud->insertAttendee($firstname,$lastname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
+        $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination);
+        $chuchPostionName=$crud->getChurchPositionById($churchposition);
+       
+        if($isSuccess){
+
+            //echo 'Registration Successful';
+            //echo '<h1 class="text-center text-success">Registration Successful!!!</h1>';
+            SendEmail::SendMail($email, 'Welcome' . ' ' . $firstname . ' ' . $lastname . ' ' . 'to International Men-s Retreat 2020', 'You have successfully registered for this year\'s Men-s Retreat ');
+            include 'includes/successmessage.php';
+
+         
+            
+        } else{
+
+            //echo  '<h1 class="text-center text-danger">Registration unsuccessful</h1>';
+            include 'includes/errormessage.php';
+        }
+
+    }
+
+
 ?>
 
 <h1><?php echo $title ?></h1>
@@ -22,8 +79,9 @@ require_once 'includes/header.php';
             <input type="hidden" id="firstname" name="firstname" value="<?php echo $_POST['firstname']; ?> ">
             <input type="hidden" id="lastname" name="lastname" value="<?php echo $_POST['lastname']; ?> ">
             <input type="hidden" id="dob" name="dob" value="<?php echo $_POST['dob']; ?> ">
-            <input type="hidden" id="exampleInputEmail1" name="exampleInputEmail1" value="<?php echo $_POST['exampleInputEmail1']; ?> ">
-            
+            <input type="hidden" id="exampleInputEmail1" name="exampleInputEmail1"
+                value="<?php echo $_POST['exampleInputEmail1']; ?> ">
+
 
 
 
