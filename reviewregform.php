@@ -2,7 +2,7 @@
 require_once 'includes/session.php';
 
 $title = "Review Registration Form 1";
-require_once 'includes/header.php'; 
+//require_once 'includes/header.php'; 
 require_once 'db/conn.php';
 require_once 'sendemail.php';
 
@@ -62,7 +62,7 @@ require_once 'sendemail.php';
 
 ?>
 
-<h1><?php echo $title ?></h1>
+<!--<h1><?php //echo $title ?></h1>-->
 
 <h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded">Review Registration Information</h1>
 

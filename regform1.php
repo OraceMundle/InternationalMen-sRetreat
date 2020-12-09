@@ -75,7 +75,7 @@ require_once 'includes/session.php';
             <option value="<?php //echo $r['speciality_id'] ?>"><?php //echo $r['name']; ?> </option>  
            <?php// } ?>
         -->
-            <option>Bishop</option>
+            <option value=1>Bishop</option>
             <option>Pastor</option>
             <option>Minister</option>
             <option>International Men's Dept. Worker</option>

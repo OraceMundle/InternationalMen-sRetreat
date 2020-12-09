@@ -19,9 +19,9 @@
 
             try {
                 //define sql statement to be executed
-                $sql="INSERT INTO attendee(firstname, lastname, dateofbirth, homeaddress, emailaddress, contactnumber, firsttimeattend, churchposition_id, churchname, country_id,
+                $sql="INSERT INTO attendee(firstname, lastname, dateofbirth, homeaddress, emailaddress, contactnumber, firsttimeattend, churchposition_id, churchname, country,
                 yearsofservice, paymentoption, avatar_path ) VALUES (:firstname, :lastname, :dob, :homeaddress, 
-                :email, :contact, :firsttimeattend, :churchposition_id, :churchname, :country_id, :yearsofservice,
+                :email, :contact, :firsttimeattend, :churchposition_id, :churchname, :country, :yearsofservice,
                 :paymentoption, :avatar_path)";
                 //prepare the sql ststement for execution 
                 $stmt=$this->db->prepare($sql);
@@ -35,7 +35,7 @@
                 $stmt->bindparam(':firsttimeattend',$firsttimeattend);
                 $stmt->bindparam(':churchposition_id',$churchposition);
                 $stmt->bindparam(':churchname',$churchname);
-                $stmt->bindparam(':country_id',$country);
+                $stmt->bindparam(':country',$country);
                 $stmt->bindparam(':yearsofservice',$yearsofservice);
                 $stmt->bindparam(':paymentoption',$paymentoption);
                 $stmt->bindparam(':avatar_path',$destination);
