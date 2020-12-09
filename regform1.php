@@ -75,7 +75,7 @@ require_once 'includes/session.php';
             <option value="<?php //echo $r['speciality_id'] ?>"><?php //echo $r['name']; ?> </option>  
            <?php// } ?>
         -->
-            <option value="1">Bishop</option>
+            <option>Bishop</option>
             <option>Pastor</option>
             <option>Minister</option>
             <option>International Men's Dept. Worker</option>
@@ -98,11 +98,11 @@ require_once 'includes/session.php';
 
     <div class="form-group">
         <label for="country">Country</label>
-        <select class="selectpicker countrypicker" data-flag="true" name="country">
-            <option data-icon="uploads/jamaica.png" value="Jamaica">Jamaica</option>
-            <option data-icon="uploads/jamaica.png"value="United Kingdom">United Kingdom</option>
-            <option data-icon="uploads/jamaica.png"value="United States of America">United States of America</option>
-            <option data-icon="uploads/jamaica.png"value="Cayman Islands">Cayman Islands</option>
+        <select class="form-control" id="country"  name="country">
+            <option>Jamaica</option>
+            <option>United Kingdom</option>
+            <option>United States of America</option>
+            <option>Cayman Islands</option>
         </select>
         <!--<input required type="text" class="form-control" id="lastname" name="lastname" aria-describedby="textHelp">-->
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->

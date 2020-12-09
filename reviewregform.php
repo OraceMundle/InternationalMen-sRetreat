@@ -12,8 +12,8 @@ require_once 'sendemail.php';
     //checking to see if 
     if(isset($_POST['submit'])){
         //extracting values from the $_POST array
-        $fname=$_POST['firstname'];
-        $lname=$_POST['lastname'];
+        $firstname=$_POST['firstname'];
+        $lastname=$_POST['lastname'];
         $dob=$_POST['dob'];
         $homeAddress=$_POST['homeAddress'];
         $email=$_POST['exampleInputEmail1'];
