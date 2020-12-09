@@ -31,6 +31,8 @@
                 <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
                 <a class="nav-link" href="regform1.php">Register</a>
                 <a class="nav-link" href="viewreservation.php">View Reservations</a>
+                <a class="nav-link" href="viewrecords.php">View Records</a>
+
 
                 <!-- Google search   -->
                 <form class="form-inline" action="https://www.google.com/search" method="GET">
