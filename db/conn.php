@@ -49,8 +49,8 @@ $crud=new crud($pdo);
 //creating new instance of user
 $user=new user($pdo);
 
-$user->insertUser("admin","@dministrat0r");
-//$user->insertUser("","");
+//$user->insertUser("admin","@dministrat0r");
+$user->insertUser("admin","password");
 
 
 

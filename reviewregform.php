@@ -1,5 +1,8 @@
+<br />
+<br />
+<br />
 <?php 
-require_once 'includes/session.php';
+//require_once 'includes/session.php';
 
 $title = "Review Registration Form 1";
 require_once 'includes/header.php'; 
@@ -81,6 +84,7 @@ require_once 'sendemail.php';
             <input type="hidden" id="dob" name="dob" value="<?php echo $_POST['dob']; ?> ">
             <input type="hidden" id="exampleInputEmail1" name="exampleInputEmail1"
                 value="<?php echo $_POST['exampleInputEmail1']; ?> ">
+            <input type="hidden" id="avatar" name="avatar" value="<?php echo $_POST['avatar']; ?> ">
 
 
 

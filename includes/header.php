@@ -1,3 +1,10 @@
+<?php
+//Seesion file contains code that starts/resumes a session
+//Placing it in the header file will include it on every page allowing session capabilities to be used accross the website.
+
+require_once 'includes/session.php';
+?>
+
 <!doctype html>
 <html lang="en">
 

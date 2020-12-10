@@ -58,7 +58,7 @@
 
 
         //editAttendee function
-        //not working code correct
+        //To be completed with other variables
        
             //code...
             public function editAttendee($id,$fname,$lname,$dob,$email,$contact,$speciality){
@@ -93,6 +93,7 @@
         
 
         //Get Attendees Function 
+        //delete unnecesssay code
         public function getAttendees(){
             try {
                 //code...

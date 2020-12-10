@@ -1,14 +1,17 @@
+<br />
+<br />
+<br />
 <?php 
 $title = "Registration Form 1";
 require_once 'includes/header.php'; 
 require_once 'db/conn.php';
-require_once 'includes/session.php';
+//require_once 'includes/session.php';
 
 ?>
 
 
-<h1><?php echo $title ?></h1>
- 
+<h1><?php //echo $title ?></h1>
+
 
 <h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded">International Men's Retreat Registration</h1>
 
@@ -64,7 +67,7 @@ require_once 'includes/session.php';
         </div>
     </div>
 
-<!-- Form 2 Test --> 
+    <!-- Form 2 Test -->
 
     <div class="form-group">
         <label for="churchposition">Church Postion</label>
@@ -98,7 +101,7 @@ require_once 'includes/session.php';
 
     <div class="form-group">
         <label for="country">Country</label>
-        <select class="form-control" id="country"  name="country">
+        <select class="form-control" id="country" name="country">
             <option>Jamaica</option>
             <option>United Kingdom</option>
             <option>United States of America</option>
@@ -118,7 +121,8 @@ require_once 'includes/session.php';
     <div class="form-group ">
         <label for="paymentoptions">Retreat Fees Payment Options: </label>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1" value="Regional Office">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"
+                value="Regional Office">
             <label class="form-check-label" for="inlineRadio1">Regional Office</label>
         </div>
         <div class="form-check form-check-inline">
@@ -126,22 +130,22 @@ require_once 'includes/session.php';
             <label class="form-check-label" for="inlineRadio2">Online</label>
         </div>
     </div>
-    
+
     <div class="custom-file">
         <input type="file" accept="image/*" class="custom-file-input" id="avatar" name="avatar">
         <label class="custom-file-label" for="avatar">Choose File</label>
         <small id="avatar" class="form-text text-danger">File Upload (Optional)</small>
     </div>
 
-    
-    <!-- end of form 2 Test --> 
-   
-        <br />
-        <br />
-        <br />
-        <div class="text-center">
-            <button type="submit" name="submit" class="btn btn-outline-primary ">Save </button> 
-            <!--
+
+    <!-- end of form 2 Test -->
+
+    <br />
+    <br />
+    <br />
+    <div class="text-center">
+        <button type="submit" name="submit" class="btn btn-outline-primary ">Save </button>
+        <!--
             <span
             
             class="text-success"> </span>
@@ -150,8 +154,8 @@ require_once 'includes/session.php';
 
             <a href="regform2.php" class="btn btn-outline-primary">Next</a>
 -->
-            <a href="index.php" class="btn btn-outline-primary">Home</a>
-        </div>
+        <a href="index.php" class="btn btn-outline-primary">Home</a>
+    </div>
 </form>
 
 <br />
