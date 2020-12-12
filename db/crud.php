@@ -61,21 +61,28 @@
         //To be completed with other variables
        
             //code...
-            public function editAttendee($id,$fname,$lname,$dob,$email,$contact,$speciality){
+            public function editAttendee($fname,$lname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
+            $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination){
                 try {
-                $sql="UPDATE `attendee` SET `firstname`= :fname,`lastname`=
-                :lname,`dateofbirth`= :dob,`emailaddress`= :email,`contactnumber`= :contact,
-                `speciality_id`= :speciality  WHERE attendee_id = :id";
+                $sql="UPDATE `attendee` SET `firstname`= :firstname,`lastname`=
+                :lastname,`dateofbirth`= :dob, `homeaddress`=:homeaddress, `emailaddress`= :email,`contactnumber`= :contact, 
+                `firsttimeattend`= :firsttimeattend, `churchposition_id`= :churchposition_id, `churchname`= :churchname, `country`= :country,
+                `yearsofservice`= :yearsofservice, `paymentoption`= :paymentoption WHERE attendee_id = :id";
                 
                 $stmt=$this->db->prepare($sql);
                 //binding all placeholders to the actual values
-                $stmt->bindparam(':id',$id);
-                $stmt->bindparam(':fname',$fname);
-                $stmt->bindparam(':lname',$lname);
+                $stmt->bindparam(':firstname',$fname);
+                $stmt->bindparam(':lastname',$lname);
                 $stmt->bindparam(':dob',$dob);
+                $stmt->bindparam(':homeaddress',$homeAddress);
                 $stmt->bindparam(':email',$email);
                 $stmt->bindparam(':contact',$contact);
-                $stmt->bindparam(':speciality',$speciality);
+                $stmt->bindparam(':firsttimeattend',$firsttimeattend);
+                $stmt->bindparam(':churchposition_id',$churchposition);
+                $stmt->bindparam(':churchname',$churchname);
+                $stmt->bindparam(':country',$country);
+                $stmt->bindparam(':yearsofservice',$yearsofservice);
+                $stmt->bindparam(':paymentoption',$paymentoption);
     
                 //execute statement
                 $stmt->execute();

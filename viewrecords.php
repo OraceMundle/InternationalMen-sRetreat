@@ -1,5 +1,8 @@
 </br>
 </br>
+</br>
+</br>
+
 
 
 <?php 
@@ -89,10 +92,9 @@
 
 
 
-
-
 <br />
-<a href="index.php" class="btn btn-primary">Home</a> 
+<a href="index.php" class="btn btn-outline-primary">Home</a> 
+<a href="logout.php" class="btn btn-outline-primary">Log Out</a> 
 <br />
 <br />
 <br />

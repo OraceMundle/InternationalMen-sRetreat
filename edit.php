@@ -2,7 +2,7 @@
 
     $title = 'Edit Record';
     require_once 'includes/header.php'; 
-    require_once 'includes/auth_check.php';
+   // require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
 
     $results = $crud->getChurchPosition();
@@ -47,17 +47,17 @@
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
     <div class="form-group">
-        <label for="speciality">Area of Speciality</label>
+        <label for="churchposition">Church Position</label>
 
 
 
 
         <!-- insert drop down box selection -->
-        <select class="form-control" id="speciality" name="speciality">
+        <select class="form-control" id="churchposition" name="churchposition">
             <?php  while($r = $results->fetch(PDO::FETCH_ASSOC)) {    ?>
 
-            <option value="<?php echo $r['speciality_id'] ?>"
-                <?php if($r['speciality_id'] == $attendee['speciality_id']) echo 'selected' ?>><?php 
+            <option value="<?php echo $r['churchposition_id'] ?>"
+                <?php if($r['churchposition_id'] == $attendee['churchposition_id']) echo 'selected' ?>><?php 
                 echo $r['name']; ?>
 
 
@@ -103,9 +103,9 @@
     </div>
     -->
     <br />
-    <button type="submit" name="submit" class="btn btn-success ">Save Changes</button>
-    <a href="index.php" class="btn btn-primary">Home</a> 
-    <a href="viewrecords.php" class="btn btn-info">Back to List</a> 
+    <button type="submit" name="submit" class="btn btn-outline-success ">Save Changes</button>
+    <a href="index.php" class="btn btn-outline-primary">Home</a> 
+    <a href="viewrecords.php" class="btn btn-outline-info">Back to List</a> 
 </form>
 
 

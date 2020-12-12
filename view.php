@@ -2,7 +2,7 @@
 
     $title = 'View Records';
     require_once 'includes/header.php'; 
-    require_once 'includes/auth_check.php';
+    //require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
 
 
@@ -21,13 +21,22 @@
 
 
 ?>
-
-
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 
 <!-- Bootstrap Card Tiles component -->
-<img src=" <?php echo empty($results['avatar_path']) ? "uploads/defaultimage.png" : $results['avatar_path']; ?>" class="rounded-circle" style="width: 20%, height: 20%;"/>
-<br/>
-<br/>
+<img src=" <?php echo empty($results['avatar_path']) ? "uploads/defaultimage.png" : $results['avatar_path']; ?>"
+    class="rounded-circle" style="width: 20%, height: 20%;" />
+<br />
+<br />
 <div class="card" style="width: 25rem;">
     <div class="card-body">
         <h5 class="card-title"><?php echo $results['firstname'] . ' ' . $results['lastname'];   ?></h5>
@@ -42,16 +51,16 @@
 <!--end of Bootstrap Card Tiles component -->
 
 
-<br/>
-<a href="index.php" class="btn btn-primary">Home</a> 
-<a href="viewrecords.php" class="btn btn-info">Back to List</a> 
-<a href="edit.php?id=<?php echo $results['attendee_id'] ?>" class="btn btn-warning">Edit</a> 
-<a onclick="return confirm('Are you sure you want to delete this record');" 
-href="delete.php?id=<?php echo $results['attendee_id'] ?>" class="btn btn-danger">Delete</a>
+<br />
+<a href="index.php" class="btn btn-primary">Home</a>
+<a href="viewrecords.php" class="btn btn-info">Back to List</a>
+<a href="edit.php?id=<?php echo $results['attendee_id'] ?>" class="btn btn-warning">Edit</a>
+<a onclick="return confirm('Are you sure you want to delete this record');"
+    href="delete.php?id=<?php echo $results['attendee_id'] ?>" class="btn btn-danger">Delete</a>
 
 
 
-    <?php } ?>
+<?php } ?>
 
 
 

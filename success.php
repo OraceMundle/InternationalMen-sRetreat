@@ -1,11 +1,22 @@
 <!--header-->
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <?php 
 
     $title='Success';
     require_once 'includes/header.php'; 
     require_once 'db/conn.php';
+    
     require_once 'includes/session.php';
     require_once 'sendemail.php';
+
+    
+
+
 
 ?>
 
@@ -21,6 +32,7 @@
 
 
 <!-- Bootstrap Card Tiles component -->
+
 <img src=" <?php echo empty($destination) ? "uploads/defaultimage.png" : $destination; ?>" class="rounded-circle" style="width: 20%, height: 20%;"/>
 <!--img src=" <?php //echo $destination ?>" class="rounded-circle" style="width: 20%, height: 20%;" />--> 
 <br />
@@ -64,6 +76,7 @@
 <!--
 <a href="viewrecords.php" class="btn btn-info">Back to List</a> 
 -->
+
 
 <br />
 <br />
