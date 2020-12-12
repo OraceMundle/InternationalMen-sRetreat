@@ -109,7 +109,24 @@
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
     
+    <div class="form-group">
+        <label for="churchname">Church Name</label>
+        <input required type="text" class="form-control" value="<?php echo $attendee['churchname'] ?>" id="churchname" name="churchname" aria-describedby="text">
+        <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+    </div>
    
+    <div class="form-group">
+        <label for="country">Country</label>
+        <select class="form-control" id="country" name="country">
+            <option value="<?php echo $r['country'] ?>"></option>
+            <option>United Kingdom</option>
+            <option>United States of America</option>
+            <option>Cayman Islands</option>
+        </select>
+        <!--<input required type="text" class="form-control" id="lastname" name="lastname" aria-describedby="textHelp">-->
+        <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+    </div>
+
     <!--
     <div class="form-group">
         <label for="exampleInputPassword1">Password</label>

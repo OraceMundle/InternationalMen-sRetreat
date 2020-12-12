@@ -7,6 +7,8 @@ require_once 'includes/header.php';
 require_once 'db/conn.php';
 //require_once 'includes/session.php';
 
+$results = $crud->getChurchPosition();
+
 ?>
 
 
@@ -73,11 +75,11 @@ require_once 'db/conn.php';
         <label for="churchposition">Church Postion</label>
         <!-- insert drop down box selection -->
         <select class="form-control" id="churchposition" name="churchposition">
-            <!-- 
-        <?php // while($r = $results->fetch(PDO::FETCH_ASSOC)) {    ?>
-            <option value="<?php //echo $r['speciality_id'] ?>"><?php //echo $r['name']; ?> </option>  
-           <?php// } ?>
-        -->
+            
+        <?php  while($r = $results->fetch(PDO::FETCH_ASSOC)) {    ?>
+            <option value="<?php echo $r['churchposition_id'] ?>"><?php echo $r['name']; ?> </option>  
+           <?php } ?>
+        <!--
             <option value=1>Bishop</option>
             <option>Pastor</option>
             <option>Minister</option>
@@ -85,6 +87,8 @@ require_once 'db/conn.php';
             <option>National Men's Dept. Worker</option>
             <option>Local Men's Dept. Worker</option>
             <option>Member</option>
+        --> 
+
         </select>
         <!--<input type="text" class="form-control" id="speciality" aria-describedby="text">-->
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
