@@ -6,6 +6,7 @@
     require_once 'db/conn.php';
 
     $results = $crud->getChurchPosition();
+    $results2 = $crud->getCountry();
 
     if(!isset($_GET['id'])){
 
@@ -16,6 +17,7 @@
     }else{
         $id = $_GET['id'];
         $attendee = $crud->getAttendeeDetails($id);
+       
 
 ?>
 
@@ -26,8 +28,8 @@
 
 <!--<form method="get" action="success.php">  Snippet of code uses the get action method -->
 <!-- form utilizing the post method -->
-<form method="post" action="editpost.php">
-    <input type="hidden"  name ="id" value="<?php echo $attendee['attendee_id'] ?>" />
+<form method="post" action="editreservations.php">
+    <input type="hidden" name="id" value="<?php echo $attendee['attendee_id'] ?>" />
     <div class="form-group">
         <label for="firstname">First Name</label>
         <input type="text" class="form-control" value="<?php echo $attendee['firstname'] ?>" id="firstname"
@@ -47,10 +49,10 @@
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
 
- <div class="form-group">
+    <div class="form-group">
         <label for="homeAddress">Home Address</label>
-        <input required type="text" class="form-control" value="<?php echo $attendee['homeaddress'] ?>" id="homeAddress" name="homeAddress"
-            aria-describedby="homeAddresHelp">
+        <input required type="text" class="form-control" value="<?php echo $attendee['homeaddress'] ?>" id="homeAddress"
+            name="homeAddress" aria-describedby="homeAddresHelp">
         <small id="homeAddressHelp" class="form-text text-muted">We'll never share your address with anyone
             else.</small>
     </div>
@@ -73,11 +75,13 @@
     <div class="form-group ">
         <label for="yearsOfService">First time attending International Men's Retreat: </label>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Yes" <?php if($attendee['firsttimeattend']=="Yes"){echo "checked";} ?> />
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Yes"
+                <?php if($attendee['firsttimeattend']=="Yes"){echo "checked";} ?> />
             <label class="form-check-label" for="inlineRadio1">Yes</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="No" <?php if($attendee['firsttimeattend']=="No"){echo "checked";} ?> />
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="No"
+                <?php if($attendee['firsttimeattend']=="No"){echo "checked";} ?> />
             <label class="form-check-label" for="inlineRadio2">No</label>
         </div>
     </div>
@@ -108,20 +112,36 @@
         <!--<input type="text" class="form-control" id="speciality" aria-describedby="text">-->
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
-    
+
     <div class="form-group">
         <label for="churchname">Church Name</label>
-        <input required type="text" class="form-control" value="<?php echo $attendee['churchname'] ?>" id="churchname" name="churchname" aria-describedby="text">
+        <input required type="text" class="form-control" value="<?php echo $attendee['churchname'] ?>" id="churchname"
+            name="churchname" aria-describedby="text">
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
-   
+
     <div class="form-group">
         <label for="country">Country</label>
         <select class="form-control" id="country" name="country">
-            <option value="<?php echo $r['country'] ?>"></option>
+
+            <?php  while($r = $results2->fetch(PDO::FETCH_ASSOC)) {    ?>
+
+            <option value="<?php echo $r['country_id'] ?>"
+                <?php if($r['country_id'] == $attendee['country_id']) echo 'selected' ?>><?php 
+    echo $r['name']; ?>
+
+            </option>
+
+            <?php } ?>
+
+            <!--
+
+            <option value="<?php //echo $r['country'] ?>"></option>
             <option>United Kingdom</option>
             <option>United States of America</option>
             <option>Cayman Islands</option>
+
+            --> 
         </select>
         <!--<input required type="text" class="form-control" id="lastname" name="lastname" aria-describedby="textHelp">-->
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
@@ -140,8 +160,8 @@
     -->
     <br />
     <button type="submit" name="submit" class="btn btn-outline-success ">Save Changes</button>
-    <a href="index.php" class="btn btn-outline-primary">Home</a> 
-    <a href="viewrecords.php" class="btn btn-outline-info">Back to List</a> 
+    <a href="index.php" class="btn btn-outline-primary">Home</a>
+    <a href="viewrecords.php" class="btn btn-outline-info">Back to List</a>
 </form>
 
 

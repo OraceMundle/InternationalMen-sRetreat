@@ -106,7 +106,9 @@
         public function getAttendees(){
             try {
                 //code...
-                $sql="SELECT * FROM `attendee` INNER JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id";
+                $sql="SELECT * FROM `attendee` 
+                INNER JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id 
+                INNER JOIN country  ON attendee.country_id = country.country_id";
                 //$sql = "SELECT * FROM `attendee`";
                 //$sql = "SELECT * FROM `attendee` a inner join specialities s on a.speciality_id = s.speciality_id";
                 $result=$this->db->query($sql);
@@ -128,7 +130,10 @@
             try {
                 //code...
                 //assign data from database to variable $sql
-                $sql="SELECT * FROM attendee INNER JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id WHERE attendee_id = :id";
+                $sql="SELECT * FROM attendee 
+                INNER JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id
+                INNER JOIN country  ON attendee.country_id = country.country_id
+                WHERE attendee_id = :id";
                 $stmt=$this->db->prepare($sql);
                 $stmt->bindparam(':id',$id);
                 $stmt->execute();
@@ -141,9 +146,7 @@
                 echo $e->getMessage();
                 return false;
             }
-            
-
-
+        
 
         }//end of get attendeeDetails function
 

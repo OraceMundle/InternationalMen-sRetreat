@@ -12,11 +12,12 @@
         $dob = $_POST['dob'];
         $email = $_POST['exampleInputEmail1'];
         $contact = $_POST['phone'];
-        $speciality = $_POST['speciality']; 
+        $churchposition = $_POST['churchposition']; 
     
 
         //Call Crud function
-        $result = $crud->editAttendee($id, $fname, $lname, $dob, $email, $contact, $speciality);
+        $result = $crud->editAttendee($fname,$lname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
+        $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination);
 
 
         //Redirect to viewrecords.php
