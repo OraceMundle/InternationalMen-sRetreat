@@ -8,6 +8,7 @@ require_once 'db/conn.php';
 //require_once 'includes/session.php';
 
 $results = $crud->getChurchPosition();
+$results2 = $crud->getCountry();
 
 ?>
 
@@ -106,10 +107,16 @@ $results = $crud->getChurchPosition();
     <div class="form-group">
         <label for="country">Country</label>
         <select class="form-control" id="country" name="country">
+
+        <?php  while($r = $results2->fetch(PDO::FETCH_ASSOC)) {    ?>
+            <option value="<?php echo $r['country_id'] ?>"><?php echo $r['name']; ?> </option>  
+           <?php } ?>
+           <!--
             <option>Jamaica</option>
             <option>United Kingdom</option>
             <option>United States of America</option>
             <option>Cayman Islands</option>
+            --> 
         </select>
         <!--<input required type="text" class="form-control" id="lastname" name="lastname" aria-describedby="textHelp">-->
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->

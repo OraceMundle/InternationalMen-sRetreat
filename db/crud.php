@@ -19,9 +19,9 @@
 
             try {
                 //define sql statement to be executed
-                $sql="INSERT INTO attendee(firstname, lastname, dateofbirth, homeaddress, emailaddress, contactnumber, firsttimeattend, churchposition_id, churchname, country,
+                $sql="INSERT INTO attendee(firstname, lastname, dateofbirth, homeaddress, emailaddress, contactnumber, firsttimeattend, churchposition_id, churchname, country_id,
                 yearsofservice, paymentoption, avatar_path ) VALUES (:firstname, :lastname, :dob, :homeaddress, 
-                :email, :contact, :firsttimeattend, :churchposition_id, :churchname, :country, :yearsofservice,
+                :email, :contact, :firsttimeattend, :churchposition_id, :churchname, :country_id, :yearsofservice,
                 :paymentoption, :avatar_path)";
                 //prepare the sql ststement for execution 
                 $stmt=$this->db->prepare($sql);
@@ -35,7 +35,7 @@
                 $stmt->bindparam(':firsttimeattend',$firsttimeattend);
                 $stmt->bindparam(':churchposition_id',$churchposition);
                 $stmt->bindparam(':churchname',$churchname);
-                $stmt->bindparam(':country',$country);
+                $stmt->bindparam(':country_id',$country);
                 $stmt->bindparam(':yearsofservice',$yearsofservice);
                 $stmt->bindparam(':paymentoption',$paymentoption);
                 $stmt->bindparam(':avatar_path',$destination);
@@ -66,8 +66,8 @@
                 try {
                 $sql="UPDATE `attendee` SET `firstname`= :firstname,`lastname`=
                 :lastname,`dateofbirth`= :dob, `homeaddress`=:homeaddress, `emailaddress`= :email,`contactnumber`= :contact, 
-                `firsttimeattend`= :firsttimeattend, `churchposition_id`= :churchposition_id, `churchname`= :churchname, `country`= :country,
-                `yearsofservice`= :yearsofservice, `paymentoption`= :paymentoption WHERE attendee_id = :id";
+                `firsttimeattend`= :firsttimeattend, `churchposition_id`= :churchposition_id, `churchname`= :churchname, `country_id`= :country,
+                `yearsofservice`= :yearsofservice, `paymentoption` `avatar_path`= :destination = :paymentoption  WHERE attendee_id = :id";
                 
                 $stmt=$this->db->prepare($sql);
                 //binding all placeholders to the actual values
@@ -80,9 +80,11 @@
                 $stmt->bindparam(':firsttimeattend',$firsttimeattend);
                 $stmt->bindparam(':churchposition_id',$churchposition);
                 $stmt->bindparam(':churchname',$churchname);
-                $stmt->bindparam(':country',$country);
+                $stmt->bindparam(':country_id',$country);
                 $stmt->bindparam(':yearsofservice',$yearsofservice);
                 $stmt->bindparam(':paymentoption',$paymentoption);
+                $stmt->bindparam(':destination',$destination);
+                
     
                 //execute statement
                 $stmt->execute();
@@ -99,7 +101,7 @@
     }//end of editAttendee function
         
 
-        //Get Attendees Function 
+        //Get Attendees Function (edit)
         //delete unnecesssay code
         public function getAttendees(){
             try {
@@ -120,7 +122,7 @@
 
         }//end of Get Attendees function
 
-        //get attendeeDetails function
+        //get attendeeDetails function (edit)
         public function getAttendeeDetails($id){
 
             try {
@@ -185,8 +187,48 @@
             }
 
            
-        }//end of get Specialities function
+        }//end of get Church Position function
 
+
+        //get Country function
+        public function getCountry(){
+
+            try {
+                //code...
+                $sql="SELECT * FROM `country`";
+                $result=$this->db->query($sql);
+                return $result;
+    
+
+            } catch (PDOException $e) {
+                //throw $th;
+                echo $e->getMessage();
+                return false;
+            }
+
+           
+        }//end of get Country function
+
+        //get Country function by ID
+        public function getCountryById($id){
+
+            try {
+                //code...
+                $sql="SELECT * FROM `country` WHERE country_id = :id";
+                $stmt=$this->db->prepare($sql);
+                $stmt->bindparam(':id', $id);
+                $stmt->execute();
+                $result=$stmt->fetch();
+                return $result;
+    
+
+            } catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }
+
+           
+        }//end of get Country by ID function
 
 
         //delete Attendee function
