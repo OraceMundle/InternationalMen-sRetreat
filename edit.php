@@ -46,11 +46,44 @@
             aria-describedby="dateHelp">
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
+
+ <div class="form-group">
+        <label for="homeAddress">Home Address</label>
+        <input required type="text" class="form-control" value="<?php echo $attendee['homeaddress'] ?>" id="homeAddress" name="homeAddress"
+            aria-describedby="homeAddresHelp">
+        <small id="homeAddressHelp" class="form-text text-muted">We'll never share your address with anyone
+            else.</small>
+    </div>
+
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" value="<?php echo $attendee['emailaddress'] ?>" id="exampleInputEmail1"
+            name="exampleInputEmail1" aria-describedby="emailHelp">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Contact Number</label>
+        <input type="text" class="form-control" value="<?php echo $attendee['contactnumber'] ?>" id="phone" name="phone"
+            aria-describedby="phoneHelp">
+        <small id="phoneHelp" name="phoneHelp" class="form-text text-muted">We'll never share your phone number with
+            anyone else.</small>
+    </div>
+
+    <div class="form-group ">
+        <label for="yearsOfService">First time attending International Men's Retreat: </label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Yes" <?php if($attendee['firsttimeattend']=="Yes"){echo "checked";} ?> />
+            <label class="form-check-label" for="inlineRadio1">Yes</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="No" <?php if($attendee['firsttimeattend']=="No"){echo "checked";} ?> />
+            <label class="form-check-label" for="inlineRadio2">No</label>
+        </div>
+    </div>
+
     <div class="form-group">
         <label for="churchposition">Church Position</label>
-
-
-
 
         <!-- insert drop down box selection -->
         <select class="form-control" id="churchposition" name="churchposition">
@@ -60,10 +93,7 @@
                 <?php if($r['churchposition_id'] == $attendee['churchposition_id']) echo 'selected' ?>><?php 
                 echo $r['name']; ?>
 
-
             </option>
-
-
 
             <?php } ?>
 
@@ -78,19 +108,8 @@
         <!--<input type="text" class="form-control" id="speciality" aria-describedby="text">-->
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" value="<?php echo $attendee['emailaddress'] ?>" id="exampleInputEmail1"
-            name="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="form-group">
-        <label for="phone">Contact Number</label>
-        <input type="text" class="form-control" value="<?php echo $attendee['contactnumber'] ?>" id="phone" name="phone"
-            aria-describedby="phoneHelp">
-        <small id="phoneHelp" name="phoneHelp" class="form-text text-muted">We'll never share your phone number with
-            anyone else.</small>
-    </div>
+    
+   
     <!--
     <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
