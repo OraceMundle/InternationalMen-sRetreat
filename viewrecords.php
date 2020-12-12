@@ -1,8 +1,12 @@
+</br>
+</br>
+
+
 <?php 
 
     $title = 'View Records';
     require_once 'includes/header.php'; 
-    require_once 'includes/auth_check.php';
+   //require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
 
 
@@ -27,7 +31,7 @@
     </table>
     -->
 
-
+</br>
 <table class="table table-striped">
     <thead class='thead-dark'>
         <tr>
@@ -55,7 +59,7 @@
     -->
 
 
-        <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
+        <?php while($r=$results->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
             <th scope="row"><?php echo $r['attendee_id'] ?></th>
             <td><?php echo $r['firstname'] ?></td>
@@ -63,7 +67,7 @@
             <!-- <td><?php //echo $r['dateofbirth'] ?></td>
             <td><?php //echo $r['emailaddress'] ?></td>
             <td><?php //echo $r['contactnumber'] ?></td>
-            this out<td><?php //echo $r['speciality_id'] ?>-->
+            this out <td><?php //echo $r['churchposition_id'] ?>-->
             <td><?php echo $r['name'] ?></td>
             <!--generates a link view.php, creating a query string  -->
             <td>

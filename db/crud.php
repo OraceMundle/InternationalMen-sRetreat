@@ -97,7 +97,7 @@
         public function getAttendees(){
             try {
                 //code...
-                $sql="SELECT * FROM `attendee` INNER JOIN churchposition  ON attendee.churchpostion_id = churchpostion.churchpostion_id";
+                $sql="SELECT * FROM `attendee` INNER JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id";
                 //$sql = "SELECT * FROM `attendee`";
                 //$sql = "SELECT * FROM `attendee` a inner join specialities s on a.speciality_id = s.speciality_id";
                 $result=$this->db->query($sql);

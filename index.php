@@ -16,7 +16,7 @@ require_once 'includes/header.php';
     <div class="text-danger"><?php 
         $d1=strtotime("December 27");
         $d2=ceil(($d1-time())/60/60/24);
-        echo  $d2 ." days until 27th of December.";
+        echo  $d2 ." days until 27th of December";
     ?> </div>
 
 
