@@ -101,17 +101,7 @@
                 return false;
             }
 
-
-
-
         }//end of get user by user name function
-
-
-
-
-
-
-
 
 
 
