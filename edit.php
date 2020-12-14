@@ -147,6 +147,32 @@
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
 
+    <div class="form-group">
+        <label for="yearsofservice">Years of Service</label>
+        <input type="text" class="form-control" value="<?php echo $attendee['yearsofservice'] ?>" id="yearsofservice" name="yearsofservice"
+            aria-describedby="yearsofserviceHelp">
+    </div>          
+
+    <br />
+    <div class="form-group ">
+        <label for="paymentoptions">Retreat Fees Payment Options: </label>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"  
+            <?php if($attendee['paymentoption']=="Regional Office"){echo "checked";} ?>
+                value="Regional Office">
+            <label class="form-check-label" for="inlineRadio1">Regional Office</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" 
+            <?php if($attendee['paymentoption']=="Online"){echo "checked";} ?> value="Online">
+            <label class="form-check-label" for="inlineRadio2">Online</label>
+        </div>
+    </div>
+
+
+
+
+
     <!--
     <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
