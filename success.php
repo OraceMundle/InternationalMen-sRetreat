@@ -25,8 +25,8 @@
 <br />
 <br />
 <br />
-<h1 class="text-center text-success">Registration Successful</h1>
-<h4 class="text-center text-success">Please check your email for confirmation</h4>
+<h1 class="text-center text-success font-weight-bold shadow p-3 mb-5 bg-white rounded">Registration Successful</h1>
+<h4 class="text-center text-success font-weight-bold shadow p-3 mb-5 bg-white rounded">Please check your email for confirmation</h4>
 <br />
 <br />
 

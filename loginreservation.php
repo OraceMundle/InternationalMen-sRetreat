@@ -41,7 +41,7 @@
 ?>
 
 <br />
-<h1 class="text-center"><?php echo $title ?> </h1>
+<h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded"><?php echo $title ?> </h1>
 
 <form action="<?php echo htmlentities($_SERVER['PHP_SELF']); ?>" method="post">
     <table class="table table-sm">

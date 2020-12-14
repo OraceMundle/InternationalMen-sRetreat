@@ -1,3 +1,9 @@
+<br />
+<br />
+<br />
+<br />
+
+
 <?php 
 
     $title = 'Edit Record';
@@ -22,9 +28,9 @@
 ?>
 
 
-<!-- <h1><?php echo $title ?></h1> -->
+ <h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded"><?php echo $title ?></h1> 
 
-<h1 class="text-center">Edit Record</h1>
+<!--<h1 class="text-center">Edit Record</h1>--> 
 
 <!--<form method="get" action="success.php">  Snippet of code uses the get action method -->
 <!-- form utilizing the post method -->
@@ -141,7 +147,7 @@
             <option>United States of America</option>
             <option>Cayman Islands</option>
 
-            --> 
+            -->
         </select>
         <!--<input required type="text" class="form-control" id="lastname" name="lastname" aria-describedby="textHelp">-->
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
@@ -149,27 +155,31 @@
 
     <div class="form-group">
         <label for="yearsofservice">Years of Service</label>
-        <input type="text" class="form-control" value="<?php echo $attendee['yearsofservice'] ?>" id="yearsofservice" name="yearsofservice"
-            aria-describedby="yearsofserviceHelp">
-    </div>          
+        <input type="text" class="form-control" value="<?php echo $attendee['yearsofservice'] ?>" id="yearsofservice"
+            name="yearsofservice" aria-describedby="yearsofserviceHelp">
+    </div>
 
     <br />
     <div class="form-group ">
         <label for="paymentoptions">Retreat Fees Payment Options: </label>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"  
-            <?php if($attendee['paymentoption']=="Regional Office"){echo "checked";} ?>
-                value="Regional Office">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio1"
+                <?php if($attendee['paymentoption']=="Regional Office"){echo "checked";} ?> value="Regional Office">
             <label class="form-check-label" for="inlineRadio1">Regional Office</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2" 
-            <?php if($attendee['paymentoption']=="Online"){echo "checked";} ?> value="Online">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions2" id="inlineRadio2"
+                <?php if($attendee['paymentoption']=="Online"){echo "checked";} ?> value="Online">
             <label class="form-check-label" for="inlineRadio2">Online</label>
         </div>
     </div>
 
-
+    <div class="custom-file">
+        <input type="file" accept="image/*" class="custom-file-input" value="<?php echo $attendee['avatar_path'] ?>"
+            id="avatar" name="avatar">
+        <label class="custom-file-label" for="avatar">Choose File</label>
+        <small id="avatar" class="form-text text-danger">File Upload (Optional)</small>
+    </div>
 
 
 
@@ -184,6 +194,8 @@
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
     </div>
     -->
+    <br />
+    <br />
     <br />
     <button type="submit" name="submit" class="btn btn-outline-success ">Save Changes</button>
     <a href="index.php" class="btn btn-outline-primary">Home</a>

@@ -1,11 +1,11 @@
 <?php 
-$title = "View Reservation";
+$title = "View Your Reservation";
 require_once 'includes/header.php'; 
 ?>
 
-<h1><?php echo $title ?></h1>
+<h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded"><?php echo $title ?></h1>
 
-<h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded">View Reservations</h1>
+<h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded">View Your Reservations</h1>
 
 <!--<form method="get" action="success.php">  Snippet of code uses the get action method -->
 <!-- form utilizing the post method -->
