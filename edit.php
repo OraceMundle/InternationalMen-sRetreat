@@ -200,4 +200,4 @@
 <br />
 
 
-<h6 class="text-center"><?php require_once 'includes/footer.php'; ?></h6>
+<?php require_once 'includes/footer.php'; ?>
