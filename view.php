@@ -1,6 +1,6 @@
 <?php 
 
-    $title = 'View Records';
+    $title = 'View Record';
     require_once 'includes/header.php'; 
     //require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
@@ -25,6 +25,8 @@
 </br>
 </br>
 </br>
+
+<h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded"><?php echo $title ?></h1>
 </br>
 </br>
 </br>
