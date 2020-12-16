@@ -49,19 +49,6 @@
         </tr>
     </thead>
     <tbody>
-        <!-- Sample row
-      <tr>
-      <th scope="row">1</th>
-      <td>Orace</td>
-      <td>Mundle</td>
-      <td>May 21 1983</td>
-      <td>oracemundle@gmail.com</td>
-      <td>876-387-1678</td>
-      <td>Database Admin</td>
-    </tr>
-    -->
-
-
         <?php while($r=$results->fetch(PDO::FETCH_ASSOC)) { ?>
         <tr>
             <th scope="row"><?php echo $r['attendee_id'] ?></th>
@@ -74,30 +61,25 @@
             <td><?php echo $r['churchposition_name'] ?></td>
             <!--generates a link view.php, creating a query string  -->
             <td>
-                <a href="view.php?id=<?php echo $r['attendee_id'] ?>" class="btn btn-primary">View</a> 
-                <a href="edit.php?id=<?php echo $r['attendee_id'] ?>" class="btn btn-warning">Edit</a> 
-                <a onclick="return confirm('Are you sure you want to delete this record');" href="delete.php?id=<?php echo $r['attendee_id'] ?>" class="btn btn-danger">Delete</a>
+                <a href="view.php?id=<?php echo $r['attendee_id'] ?>" class="btn btn-primary">View</a>
+                <a href="edit.php?id=<?php echo $r['attendee_id'] ?>" class="btn btn-warning">Edit</a>
+                <a onclick="return confirm('Are you sure you want to delete this record');"
+                    href="delete.php?id=<?php echo $r['attendee_id'] ?>" class="btn btn-danger">Delete</a>
             </td>
-
         </tr>
-
-
-
         <?php } ?>
-
     </tbody>
 </table>
-
-
-
-
-
-<br />
-<a href="index.php" class="btn btn-outline-primary">Home</a> 
-<a href="logout.php" class="btn btn-outline-primary">Log Out</a> 
 <br />
 <br />
 <br />
-
-
+<br />
+<a href="index.php" class="btn btn-outline-primary">Home</a>
+<a href="logout.php" class="btn btn-outline-primary">Log Out</a>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 <h6 class="text-center"><?php require_once 'includes/footer.php'; ?></h6>

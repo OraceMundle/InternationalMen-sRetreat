@@ -48,6 +48,8 @@
         <p class="card-text">Phone Number: <?php    echo $results['contactnumber']; ?> </p>
         <p class="card-text">First time attending: <?php    echo $results['firsttimeattend']; ?> </p>
         <p class="card-text">Country: <?php    echo $results['country_name']; ?> </p>
+        <p class="card-text">Years of Service: <?php    echo $results['yearsofservice']; ?> </p>
+        <p class="card-text">Payment Options: <?php    echo $results['paymentoption']; ?> </p>
 
 
     </div>

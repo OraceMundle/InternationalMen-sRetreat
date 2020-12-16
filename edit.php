@@ -2,36 +2,23 @@
 <br />
 <br />
 <br />
-
-
 <?php 
-
     $title = 'Edit Record';
     require_once 'includes/header.php'; 
    // require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
-
     $results = $crud->getChurchPosition();
     $results2 = $crud->getCountry();
-
     if(!isset($_GET['id'])){
-
         //echo 'error';
         include ' includes/errormessage.php';
         header("Location: viewrecords.php");
-
     }else{
         $id = $_GET['id'];
         $attendee = $crud->getAttendeeDetails($id);
-       
-
 ?>
-
-
- <h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded"><?php echo $title ?></h1> 
-
-<!--<h1 class="text-center">Edit Record</h1>--> 
-
+<h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded"><?php echo $title ?></h1>
+<!--<h1 class="text-center">Edit Record</h1>-->
 <!--<form method="get" action="success.php">  Snippet of code uses the get action method -->
 <!-- form utilizing the post method -->
 <form method="post" action="editpost.php">
@@ -102,11 +89,8 @@
             <option value="<?php echo $r['churchposition_id'] ?>"
                 <?php if($r['churchposition_id'] == $attendee['churchposition_id']) echo 'selected' ?>><?php 
                 echo $r['churchposition_name']; ?>
-
             </option>
-
             <?php } ?>
-
             <!--
             <option value="1">Database Admin</option>
             <option>Software Developer</option>
@@ -114,7 +98,6 @@
             <option>Other</option>
             <option>5</option>-->
         </select>
-
         <!--<input type="text" class="form-control" id="speciality" aria-describedby="text">-->
         <!--<small id="firstname" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
     </div>
@@ -134,19 +117,14 @@
 
             <option value="<?php echo $r['country_id'] ?>"
                 <?php if($r['country_id'] == $attendee['country_id']) echo 'selected' ?>><?php 
-    echo $r['country_name']; ?>
-
+                    echo $r['country_name']; ?>
             </option>
-
             <?php } ?>
-
             <!--
-
             <option value="<?php //echo $r['country'] ?>"></option>
             <option>United Kingdom</option>
             <option>United States of America</option>
             <option>Cayman Islands</option>
-
             -->
         </select>
         <!--<input required type="text" class="form-control" id="lastname" name="lastname" aria-describedby="textHelp">-->
@@ -180,9 +158,6 @@
         <label class="custom-file-label" for="avatar">Choose File</label>
         <small id="avatar" class="form-text text-danger">File Upload (Optional)</small>
     </div>
-
-
-
     <!--
     <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
@@ -201,15 +176,9 @@
     <a href="index.php" class="btn btn-outline-primary">Home</a>
     <a href="viewrecords.php" class="btn btn-outline-info">Back to List</a>
 </form>
-
-
 <?php } ?>
-
-
 <br />
 <br />
 <br />
 <br />
-
-
 <?php require_once 'includes/footer.php'; ?>

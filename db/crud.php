@@ -3,8 +3,6 @@
     class crud
     
     {
-
-        
         //private database object
         private $db;
 
@@ -49,12 +47,10 @@
                 //throw $e;
                 echo $e->getMessage();
                 return false;
-                
+              
             }        
-
         }
         //end of insert function
-
 
 
         //editAttendee function
@@ -83,13 +79,12 @@
                 $stmt->bindparam(':yearsofservice',$yearsofservice);
                 $stmt->bindparam(':paymentoption',$paymentoption);
                 $stmt->bindparam(':destination',$destination);
-                
-    
+              
+   
                 //execute statement
                 $stmt->execute();
                 return true;
-    
-    
+        
             } 
          catch (PDOException $e) {
             //throw $th;
@@ -118,8 +113,7 @@
                 echo $e->getMessage();
                 return false;
             }
-
-           
+      
 
         }//end of Get Attendees function
 
@@ -146,7 +140,6 @@
                 return false;
             }
         
-
         }//end of get attendeeDetails function
 
 
