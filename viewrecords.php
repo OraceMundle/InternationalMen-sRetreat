@@ -71,7 +71,7 @@
             <td><?php //echo $r['emailaddress'] ?></td>
             <td><?php //echo $r['contactnumber'] ?></td>
             this out <td><?php //echo $r['churchposition_id'] ?>-->
-            <td><?php echo $r['name'] ?></td>
+            <td><?php echo $r['churchposition_name'] ?></td>
             <!--generates a link view.php, creating a query string  -->
             <td>
                 <a href="view.php?id=<?php echo $r['attendee_id'] ?>" class="btn btn-primary">View</a> 

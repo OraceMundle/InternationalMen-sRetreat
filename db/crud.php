@@ -67,7 +67,7 @@
                 $sql="UPDATE `attendee` SET `firstname`= :firstname,`lastname`=
                 :lastname,`dateofbirth`= :dob, `homeaddress`=:homeaddress, `emailaddress`= :email,`contactnumber`= :contact, 
                 `firsttimeattend`= :firsttimeattend, `churchposition_id`= :churchposition_id, `churchname`= :churchname, `country_id`= :country,
-                `yearsofservice`= :yearsofservice, `paymentoption` `avatar_path`= :destination = :paymentoption  WHERE attendee_id = :id";
+                `yearsofservice`= :yearsofservice, `paymentoption` = :paymentoption, `avatar_path`= :destination   WHERE attendee_id = :id";
                 
                 $stmt=$this->db->prepare($sql);
                 //binding all placeholders to the actual values
@@ -107,8 +107,8 @@
             try {
                 //code...
                 $sql="SELECT * FROM `attendee` 
-                INNER JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id 
-                INNER JOIN country  ON attendee.country_id = country.country_id";
+                JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id 
+                JOIN country  ON attendee.country_id = country.country_id";
                 //$sql = "SELECT * FROM `attendee`";
                 //$sql = "SELECT * FROM `attendee` a inner join specialities s on a.speciality_id = s.speciality_id";
                 $result=$this->db->query($sql);
@@ -131,8 +131,8 @@
                 //code...
                 //assign data from database to variable $sql
                 $sql="SELECT * FROM attendee 
-                INNER JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id
-                INNER JOIN country  ON attendee.country_id = country.country_id
+                JOIN churchposition  ON attendee.churchposition_id = churchposition.churchposition_id
+                JOIN country  ON attendee.country_id = country.country_id
                 WHERE attendee_id = :id";
                 $stmt=$this->db->prepare($sql);
                 $stmt->bindparam(':id',$id);

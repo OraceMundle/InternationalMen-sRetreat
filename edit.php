@@ -101,7 +101,7 @@
 
             <option value="<?php echo $r['churchposition_id'] ?>"
                 <?php if($r['churchposition_id'] == $attendee['churchposition_id']) echo 'selected' ?>><?php 
-                echo $r['name']; ?>
+                echo $r['churchposition_name']; ?>
 
             </option>
 
@@ -134,7 +134,7 @@
 
             <option value="<?php echo $r['country_id'] ?>"
                 <?php if($r['country_id'] == $attendee['country_id']) echo 'selected' ?>><?php 
-    echo $r['name']; ?>
+    echo $r['country_name']; ?>
 
             </option>
 
