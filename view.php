@@ -19,7 +19,6 @@
        
     
 
-
 ?>
 </br>
 </br>
@@ -44,8 +43,11 @@
         <h5 class="card-title"><?php echo $results['firstname'] . ' ' . $results['lastname'];   ?></h5>
         <h6 class="card-subtitle mb-2 text-muted"><?php  echo $results['churchposition_name'];  ?></h6>
         <p class="card-text">Date of Birth: <?php    echo $results['dateofbirth']; ?> </p>
+        <p class="card-text">Address: <?php    echo $results['homeaddress']; ?> </p>
         <p class="card-text">Email Address: <?php     echo $results['emailaddress']; ?> </p>
         <p class="card-text">Phone Number: <?php    echo $results['contactnumber']; ?> </p>
+        <p class="card-text">First time attending: <?php    echo $results['firsttimeattend']; ?> </p>
+        <p class="card-text">Country: <?php    echo $results['country_name']; ?> </p>
 
 
     </div>
