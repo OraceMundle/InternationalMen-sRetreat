@@ -27,8 +27,8 @@ require_once 'includes/header.php';
 
     <div class="text-center">
         <!--<button type="submit" name="submit" class="btn btn-outline-primary ">Edit </button>-->
-        <a href="regform1.php" class="btn btn-outline-primary">Edit</a>
-        <a href="regform1.php" class="btn btn-outline-primary">Cancel</a>
+        <a href="editreservation.php" class="btn btn-outline-primary">Edit</a>
+        <a onclick="return confirm('Are you sure you want to delete this record');" href="delete.php?id=<?php echo $r['attendee_id'] ?>" class="btn btn-outline-danger">Cancel</a>
         <a href="index.php" class="btn btn-outline-primary">Home</a>
     </div>
 </form>

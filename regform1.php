@@ -78,7 +78,7 @@ $results2 = $crud->getCountry();
         <select class="form-control" id="churchposition" name="churchposition">
             
         <?php  while($r = $results->fetch(PDO::FETCH_ASSOC)) {    ?>
-            <option value="<?php echo $r['churchposition_id'] ?>"><?php echo $r['name']; ?> </option>  
+            <option value="<?php echo $r['churchposition_id'] ?>"><?php echo $r['churchposition_name']; ?> </option>  
            <?php } ?>
         <!--
             <option value=1>Bishop</option>
@@ -109,7 +109,7 @@ $results2 = $crud->getCountry();
         <select class="form-control" id="country" name="country">
 
         <?php  while($r = $results2->fetch(PDO::FETCH_ASSOC)) {    ?>
-            <option value="<?php echo $r['country_id'] ?>"><?php echo $r['name']; ?> </option>  
+            <option value="<?php echo $r['country_id'] ?>"><?php echo $r['country_name']; ?> </option>  
            <?php } ?>
            <!--
             <option>Jamaica</option>

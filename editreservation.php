@@ -34,7 +34,7 @@
 
 <!--<form method="get" action="success.php">  Snippet of code uses the get action method -->
 <!-- form utilizing the post method -->
-<form method="post" action="editpost.php">
+<form method="post" action="editreservationpost.php">
     <input type="hidden" name="id" value="<?php echo $attendee['attendee_id'] ?>" />
     <div class="form-group">
         <label for="firstname">First Name</label>
@@ -199,7 +199,7 @@
     <br />
     <button type="submit" name="submit" class="btn btn-outline-success ">Save Changes</button>
     <a href="index.php" class="btn btn-outline-primary">Home</a>
-    <a href="viewrecords.php" class="btn btn-outline-info">Back to List</a>
+    <a href="viewreservation.php" class="btn btn-outline-info">Back to Reservation</a>
 </form>
 
 

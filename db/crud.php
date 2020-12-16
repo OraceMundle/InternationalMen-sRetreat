@@ -64,8 +64,7 @@
             public function editAttendee($fname,$lname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
             $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination){
                 try {
-                $sql="UPDATE `attendee` SET `firstname`= :firstname,`lastname`=
-                :lastname,`dateofbirth`= :dob, `homeaddress`=:homeaddress, `emailaddress`= :email,`contactnumber`= :contact, 
+                $sql="UPDATE `attendee` SET `firstname`= :firstname,`lastname`=:lastname,`dateofbirth`= :dob, `homeaddress`=:homeaddress, `emailaddress`= :email,`contactnumber`= :contact, 
                 `firsttimeattend`= :firsttimeattend, `churchposition_id`= :churchposition_id, `churchname`= :churchname, `country_id`= :country,
                 `yearsofservice`= :yearsofservice, `paymentoption` = :paymentoption, `avatar_path`= :destination   WHERE attendee_id = :id";
                 

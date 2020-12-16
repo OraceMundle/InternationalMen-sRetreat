@@ -10,9 +10,16 @@
         $fname = $_POST['firstname'];
         $lname = $_POST['lastname'];
         $dob = $_POST['dob'];
+        $homeAddress = $_POST['homeAddress'];
         $email = $_POST['exampleInputEmail1'];
         $contact = $_POST['phone'];
+        $firsttimeattend = $_POST['inlineRadioOptions'];
         $churchposition = $_POST['churchposition']; 
+        $churchname = $_POST['churchname'];
+        $country = $_POST['country'];
+        $yearsofservice = $_POST['yearsofservice'];
+        $paymentoption = $_POST['inlineRadioOptions2'];
+        $destination = $_POST['avatar'];
     
 
         //Call Crud function
@@ -22,11 +29,11 @@
 
         //Redirect to viewrecords.php
         if($result){
-            header("Location: viewrecords.php");
+            header("Location: viewreservation.php");
         }else{
             //echo 'error';
             include ' includes/errormessage.php';
-            header("Location: viewrecords.php");
+            header("Location: viewreservation.php");
 
         } 
     
