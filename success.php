@@ -1,10 +1,6 @@
 <!--header-->
 <br />
 <br />
-<br />
-<br />
-<br />
-<br />
 <?php 
 
     $title='Success';
@@ -13,6 +9,7 @@
     
     require_once 'includes/session.php';
     require_once 'sendemail.php';
+    
 
     
 

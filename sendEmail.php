@@ -1,9 +1,10 @@
 <?php
 
+
 use Dotenv\Dotenv;
 
 require 'vendor\autoload.php';
-//require  'vendor\vlucas\phpdotenv\src\Dotenv.php';
+require  'vendor\vlucas\phpdotenv\src\Dotenv.php';
 
        
 
@@ -14,7 +15,8 @@ require 'vendor\autoload.php';
                     //variable key stores API
                     //$key=Dotenv\Dotenv::createImmutable(__DIR__,"/..");
                     //$key->load();
-
+                    
+                    //const MY_KEY = process.env.INTERNATIONAL_MENS_APP_API_KEY;
 
                     //$key = getenv('API_KEY');
                                        

@@ -1,13 +1,14 @@
 <?php 
 $title = "View Your Reservation";
 require_once 'includes/header.php'; 
+require_once 'includes/auth_check.php';
 
  //Get all attendees by id
     
  if(!isset($_GET['id'])){
     //not displaying
      echo "<h1 class='text-danger'>Please verify information and try again </h1>";    
-     //include ' includes/errormessage.php';
+     include ' includes/errormessage.php';
     
  } else{
      $id = $_GET['id'];

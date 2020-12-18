@@ -61,14 +61,11 @@ require_once 'includes/session.php';
             <div class="navbar-nav ml-auto">
 
                 <?php 
-
-
                   if(!isset($_SESSION['userid'])) {
-
                 ?>
-                
+               
                 <p class="text-info fs-2"><?php echo date("Y-m-d h:i:sa") ?></p>
-             
+            
                 <a class="nav-link active" href="login.php">Login <span class="sr-only">(current)</span></a>
                 <!--<a class="nav-link" href="viewrecords.php">View Attendees</a>-->
 
