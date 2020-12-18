@@ -23,7 +23,7 @@
     
 
         //Call Crud function
-        $result = $crud->editAttendee($fname,$lname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
+        $result = $crud->editAttendee($id,$fname,$lname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
         $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination);
 
 
@@ -37,8 +37,6 @@
 
         } 
     
-
-
     }else {
         //echo 'error';
         include ' includes/errormessage.php';

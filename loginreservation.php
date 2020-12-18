@@ -22,6 +22,7 @@
         var_dump($new_password);
         //calling user object
         $result = $user->getUser($username,$new_password);
+        
 
         if(!$result){
 
@@ -30,7 +31,7 @@
 
         }else{
 
-            $_SESSION['username'] = $username;
+            //$_SESSION['username'] = $username;
             $_SESSION['userid'] = $result['id'];
             header("Location: viewreservation.php");
         }

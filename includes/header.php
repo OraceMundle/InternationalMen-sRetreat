@@ -37,10 +37,10 @@ require_once 'includes/session.php';
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav mr-auto">
                 <a class="nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-link" href="regform1.php">Register</a>
+                <a class="nav-link" href="regform1.php">Register Now</a>
                 <!-- change back to loginreservation.php -->
-                <a class="nav-link" href="viewreservation.php">View Reservations</a>
-                <a class="nav-link" href="viewrecords.php">View Records</a>
+                <a class="nav-link" href="viewreservation.php">Reservations</a>
+                <a class="nav-link" href="viewrecords.php">Records</a>
                 
 
                 <!-- Google search   -->

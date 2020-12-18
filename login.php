@@ -8,7 +8,7 @@
 
 <?php 
 
-    $title = 'User Login';
+    $title = 'Admin Login';
     require_once 'includes/header.php'; 
     require_once 'db/conn.php';
     

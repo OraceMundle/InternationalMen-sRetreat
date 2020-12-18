@@ -85,8 +85,11 @@ require_once 'sendemail.php';
             <input type="hidden" id="exampleInputEmail1" name="exampleInputEmail1"
                 value="<?php echo $_POST['exampleInputEmail1']; ?> ">
             <input type="hidden" id="avatar" name="avatar" value="<?php echo empty($destination) ? 'uploads/defaultimage.png' : $destination;/*$_POST['avatar'];*/ ?> ">
-
-
+            <input type="hidden" id="homeAddress" name="homeAddress" value="<?php echo $_POST['homeAddress']; ?> ">
+            <input type="hidden" id="phone" name="phone" value="<?php echo $_POST['phone']; ?> ">
+            <input type="hidden" id="churchposition" name="churchposition" value="<?php echo $_POST['churchposition']; ?> ">
+            <input type="hidden" id="country" name="country" value="<?php echo $_POST['country']; ?> ">
+            <input type="hidden" id="churchname" name="churchname" value="<?php echo $_POST['churchname']; ?> ">
 
 
             <p class="card-text">Firstname: <?php   echo $_POST['firstname']; ?> </p>
