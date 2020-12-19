@@ -27,11 +27,6 @@
 
 <h1 class="text-center font-weight-bold shadow p-3 mb-5 bg-white rounded"><?php echo $title ?></h1>
 </br>
-</br>
-</br>
-</br>
-</br>
-</br>
 
 <!-- Bootstrap Card Tiles component -->
 <img src=" <?php echo empty($results['avatar_path']) ? "uploads/defaultimage.png" : $results['avatar_path']; ?>"

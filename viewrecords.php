@@ -3,8 +3,6 @@
 </br>
 </br>
 
-
-
 <?php 
 
     $title = 'View Records';

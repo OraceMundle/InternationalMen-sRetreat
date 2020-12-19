@@ -37,8 +37,8 @@
 <br />
 <div class="card" style="width: 25rem;">
     <div class="card-body">
-        <h3 class="card-title"><?php echo $_POST['firstname'] . ' ' . $_POST['lastname'];   ?></h5>
-        <h4 class="card-title"><?php echo $_POST['churchposition'];   ?></h5>
+        <h3 class="card-title"><?php echo $_POST['firstname'] . ' ' . $_POST['lastname'];   ?></h3>
+        <h5 class="card-title"><?php echo $_POST['churchposition'];   ?></h5>
         <p class="card-text">Date of Birth: <?php    echo $_POST['dob']; ?> </p>
         <p class="card-text">Email Address: <?php     echo $_POST['exampleInputEmail1']; ?> </p>
         <p class="card-text">Home Address: <?php     echo $_POST['homeAddress']; ?> </p>
@@ -55,7 +55,7 @@
 <br />
 <br />
 <a href="index.php" class="btn btn-outline-info">Home</a>
-<a href="regform1.php" class="btn btn-outline-info">Register Here</a> 
+<a href="regform1.php" class="btn btn-outline-info">Complete another Registration Here</a> 
 
 
 <br />
