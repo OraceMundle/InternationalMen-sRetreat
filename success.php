@@ -9,9 +9,9 @@
     
     require_once 'includes/session.php';
     require_once 'sendemail.php';
-    
-    $results = $crud->getChurchPosition();
-    $results2 = $crud->getCountry();
+    //$results =$crud->getAttendeeDetails($id);
+    //$results = $crud->getChurchPosition();
+    //$results2 = $crud->getCountry();
 
     
 
@@ -42,9 +42,9 @@
         <p class="card-text">Date of Birth: <?php    echo $_POST['dob']; ?> </p>
         <p class="card-text">Email Address: <?php     echo $_POST['exampleInputEmail1']; ?> </p>
         <p class="card-text">Home Address: <?php     echo $_POST['homeAddress']; ?> </p>
-        <p class="card-text">Home Church:: <?php     echo $_POST['churchname']; ?> </p>
-        <p class="card-text">Country:: <?php     echo $_POST['country']; ?> </p>
-
+        <p class="card-text">Home Church: <?php     echo $_POST['churchname']; ?> </p>
+        <p class="card-text">Country: <?php     echo $_POST['country']; ?> </p>
+        
 
     </div>
 </div>

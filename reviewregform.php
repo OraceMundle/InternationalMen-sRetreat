@@ -44,6 +44,7 @@ require_once 'sendemail.php';
         $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination);
         $chuchPostionName=$crud->getChurchPositionById($churchposition);
         $countryname=$crud->getCountryById($country);
+        $attendee = $crud->getAttendeeDetails($id);
        
         if($isSuccess){
 
@@ -79,6 +80,7 @@ require_once 'sendemail.php';
             <h5 class="card-title"><?php //echo  $_POST['firstname'] . ' ' . $_POST['lastname'];   ?></h5>
             <h6 class="card-subtitle mb-2 text-muted"><?php //echo $_POST['churchposition'];  ?></h6>
             -->
+            <input type="hidden" name="id" value="<?php echo $attendee['attendee_id'] ?>" />
             <input type="hidden" id="firstname" name="firstname" value="<?php echo $_POST['firstname']; ?> ">
             <input type="hidden" id="lastname" name="lastname" value="<?php echo $_POST['lastname']; ?> ">
             <input type="hidden" id="dob" name="dob" value="<?php echo $_POST['dob']; ?> ">

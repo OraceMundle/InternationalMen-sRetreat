@@ -2,9 +2,8 @@
 
     $title = 'View Record';
     require_once 'includes/header.php'; 
-    //require_once 'includes/auth_check.php';
+    require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
-
 
     //Get all attendees by id
     
@@ -16,8 +15,7 @@
     } else{
         $id = $_GET['id'];
         $results = $crud->getAttendeeDetails($id);
-       
-    
+        
 
 ?>
 </br>
@@ -51,7 +49,6 @@
 </div>
 <!--end of Bootstrap Card Tiles component -->
 
-
 <br />
 <a href="index.php" class="btn btn-primary">Home</a>
 <a href="viewrecords.php" class="btn btn-info">Back to List</a>
@@ -59,13 +56,7 @@
 <a onclick="return confirm('Are you sure you want to delete this record');"
     href="delete.php?id=<?php echo $results['attendee_id'] ?>" class="btn btn-danger">Delete</a>
 
-
-
 <?php } ?>
-
-
-
-
 
 <br />
 <br />
