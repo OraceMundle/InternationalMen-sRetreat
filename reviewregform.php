@@ -31,8 +31,7 @@ require_once 'sendemail.php';
 
         //upload file code path
         
-              
-        
+                
         $orig_file=$_FILES["avatar"]["tmp_name"];
         $ext=pathinfo($_FILES["avatar"]["name"], PATHINFO_EXTENSION);
         $target_dir='uploads/';
@@ -44,12 +43,13 @@ require_once 'sendemail.php';
         $isSuccess=$crud->insertAttendee($firstname,$lastname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
         $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination);
         $chuchPostionName=$crud->getChurchPositionById($churchposition);
+        $countryname=$crud->getCountryById($country);
        
         if($isSuccess){
 
             //echo 'Registration Successful';
             //echo '<h1 class="text-center text-success">Registration Successful!!!</h1>';
-            SendEmail::SendMail($email, 'Welcome' . ' ' . $firstname . ' ' . $lastname . ' ' . 'to International Men-s Retreat 2020', 'You have successfully registered for this year\'s Men-s Retreat ');
+            SendEmail::SendMail($email, 'Welcome' . ' ' . $firstname . ' ' . $lastname . ' ' . 'to International Men\'s Retreat 2020', 'You have successfully registered for this year\'s Men\'s Retreat ');
             include 'includes/successmessage.php';
 
          
@@ -76,8 +76,8 @@ require_once 'sendemail.php';
     <div class="card" style="width: 25rem;">
         <div class="card-body">
             <!--
-            <h5 class="card-title"><?php echo  $_POST['firstname'] . ' ' . $_POST['lastname'];   ?></h5>
-            <h6 class="card-subtitle mb-2 text-muted"><?php echo $_POST['churchposition'];  ?></h6>
+            <h5 class="card-title"><?php //echo  $_POST['firstname'] . ' ' . $_POST['lastname'];   ?></h5>
+            <h6 class="card-subtitle mb-2 text-muted"><?php //echo $_POST['churchposition'];  ?></h6>
             -->
             <input type="hidden" id="firstname" name="firstname" value="<?php echo $_POST['firstname']; ?> ">
             <input type="hidden" id="lastname" name="lastname" value="<?php echo $_POST['lastname']; ?> ">
@@ -87,8 +87,8 @@ require_once 'sendemail.php';
             <input type="hidden" id="avatar" name="avatar" value="<?php echo empty($destination) ? 'uploads/defaultimage.png' : $destination;/*$_POST['avatar'];*/ ?> ">
             <input type="hidden" id="homeAddress" name="homeAddress" value="<?php echo $_POST['homeAddress']; ?> ">
             <input type="hidden" id="phone" name="phone" value="<?php echo $_POST['phone']; ?> ">
-            <input type="hidden" id="churchposition" name="churchposition" value="<?php echo $_POST['churchposition']; ?> ">
-            <input type="hidden" id="country" name="country" value="<?php echo $_POST['country']; ?> ">
+            <input type="hidden" id="churchposition" name="churchposition" value="<?php echo $chuchPostionName['churchposition_name']; ?> ">
+            <input type="hidden" id="country" name="country" value="<?php echo $countryname['country_name']; ?> ">
             <input type="hidden" id="churchname" name="churchname" value="<?php echo $_POST['churchname']; ?> ">
 
 
@@ -100,9 +100,9 @@ require_once 'sendemail.php';
             <p class="card-text">Phone Number: <?php    echo $_POST['phone']; ?> </p>
             <p class="card-text">First time attending International Men's Retreat:
                 <?php    echo $_POST['inlineRadioOptions']; ?> </p>
-            <p class="card-text">Church Position: <?php   echo $_POST['churchposition']; ?> </p>
+            <p class="card-text">Church Position: <?php   echo $chuchPostionName['churchposition_name']; ?> </p>
             <p class="card-text">Church Name: <?php   echo $_POST['churchname']; ?> </p>
-            <p class="card-text">Country: <?php   echo $_POST['country']; ?> </p>
+            <p class="card-text">Country: <?php   echo $countryname['country_name']; ?> </p>
             <p class="card-text">Years of Service: <?php   echo $_POST['yearsofservice']; ?> </p>
             <p class="card-text">Retreat Payment Option: <?php   echo $_POST['inlineRadioOptions2']; ?> </p>
 

@@ -10,6 +10,8 @@
     require_once 'includes/session.php';
     require_once 'sendemail.php';
     
+    $results = $crud->getChurchPosition();
+    $results2 = $crud->getCountry();
 
     
 

@@ -2,26 +2,26 @@
 <?php
 
 //Development connection
-/*
+
 $host = '127.0.0.1'; 
 $db = 'internationalmensretreat_db';
 $user = 'root';
 $pass = '';
 //charset variable
 $charset = 'utf8mb4';
-*/
+
 
 
 //creating variable for localhost, you assign either the IP address or the word localhost
 //Remote Database Connection
-
+/*
 $host='remotemysql.com'; 
 $db='9jVvtU3M4t';
 $user='9jVvtU3M4t';
 $pass='U8L2S551T5';
 //charset variable
 $charset='utf8mb4';
-
+*/
 //odbc like connector for mysql connector
 $dsn="mysql:host=$host;dbname=$db;charset=$charset;password=$pass";
 
