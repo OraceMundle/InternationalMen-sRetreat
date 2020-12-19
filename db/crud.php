@@ -58,11 +58,11 @@
        
             //code...
             public function editAttendee($id,$fname,$lname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
-            $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination){
+            $churchposition,$churchname,$country,$yearsofservice,$paymentoption){
                 try {
                 $sql="UPDATE `attendee` SET `firstname`=:firstname,`lastname`=:lastname,`dateofbirth`=:dateofbirth,`homeaddress`=:homeaddress,`emailaddress`=:email,`contactnumber`=:contact, 
                 `firsttimeattend`=:firsttimeattend,`churchposition_id`=:churchposition_id,`churchname`=:churchname,`country_id`=:country_id,
-                `yearsofservice`=:yearsofservice,`paymentoption`=:paymentoption,`avatar_path`=:destination   WHERE attendee_id=:id";
+                `yearsofservice`=:yearsofservice,`paymentoption`=:paymentoption  WHERE attendee_id=:id";
                 
                 $stmt=$this->db->prepare($sql);
                 //binding all placeholders to the actual values
@@ -80,7 +80,7 @@
                 $stmt->bindparam(':country_id',$country);
                 $stmt->bindparam(':yearsofservice',$yearsofservice);
                 $stmt->bindparam(':paymentoption',$paymentoption);
-                $stmt->bindparam(':destination',$destination);
+                
               
    
                 //execute statement
@@ -250,6 +250,29 @@
         }//end of delete Attendee function
         
         
+
+
+         //get attendee function by firstname and lastname
+         public function getAttendee($firstname, $lastname){
+            try {
+                //code...
+                //assign data from database to variable $sql
+                $sql = "SELECT * FROM attendee WHERE firstname = :firstname AND lastname = :lastname ";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':firstname', $firstname);
+                $stmt->bindparam(':lastname', $lastname);
+                $stmt->execute();
+                $result = $stmt->fetch();
+                return $result;
+            } catch (PDOException $e) {
+                //throw $th;
+                echo $e->getMessage();
+                return false;
+            }
+
+        }//end of get user function
+
+
 
 
         

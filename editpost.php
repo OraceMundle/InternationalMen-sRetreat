@@ -19,12 +19,12 @@
         $country = $_POST['country'];
         $yearsofservice = $_POST['yearsofservice'];
         $paymentoption = $_POST['inlineRadioOptions2'];
-        $destination = $_POST['avatar'];
+        //$destination = $_POST['avatar'];
     
 
         //Call Crud function
         $result = $crud->editAttendee($id,$fname,$lname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
-        $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination);
+        $churchposition,$churchname,$country,$yearsofservice,$paymentoption);
 
 
         //Redirect to viewrecords.php
