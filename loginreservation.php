@@ -48,7 +48,7 @@
     <table class="table table-sm">
         <tr>
 
-            <td><label for="username">Username: * </label></td>
+            <td><label for="username">Us: * </label></td>
             <td><input required type="text" name="username" class="form-control" id="username"
                     value="<?php if($_SERVER['REQUEST_METHOD'] == 'POST') {echo $_POST['username'];} ?>">
 
