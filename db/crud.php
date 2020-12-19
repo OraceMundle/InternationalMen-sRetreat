@@ -57,18 +57,20 @@
         //To be completed with other variables
        
             //code...
-            public function editAttendee($fname,$lname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
+            public function editAttendee($id,$fname,$lname,$dob,$homeAddress,$email,$contact,$firsttimeattend,
             $churchposition,$churchname,$country,$yearsofservice,$paymentoption,$destination){
                 try {
-                $sql="UPDATE `attendee` SET `firstname`=:firstname,`lastname`=:lastname,`dateofbirth`=:dob,`homeaddress`=:homeaddress,`emailaddress`=:email,`contactnumber`=:contact, 
-                `firsttimeattend`=:firsttimeattend, `churchposition_id`=:churchposition_id,`churchname`=:churchname,`country_id`=:country_id,
+                $sql="UPDATE `attendee` SET `firstname`=:firstname,`lastname`=:lastname,`dateofbirth`=:dateofbirth,`homeaddress`=:homeaddress,`emailaddress`=:email,`contactnumber`=:contact, 
+                `firsttimeattend`=:firsttimeattend,`churchposition_id`=:churchposition_id,`churchname`=:churchname,`country_id`=:country_id,
                 `yearsofservice`=:yearsofservice,`paymentoption`=:paymentoption,`avatar_path`=:destination   WHERE attendee_id=:id";
                 
                 $stmt=$this->db->prepare($sql);
                 //binding all placeholders to the actual values
+                $stmt->bindparam(':id',$id);
+                $stmt->bindparam(':firstname',$fname);
                 $stmt->bindparam(':firstname',$fname);
                 $stmt->bindparam(':lastname',$lname);
-                $stmt->bindparam(':dob',$dob);
+                $stmt->bindparam(':dateofbirth',$dob);
                 $stmt->bindparam(':homeaddress',$homeAddress);
                 $stmt->bindparam(':email',$email);
                 $stmt->bindparam(':contact',$contact);
